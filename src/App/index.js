@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader/root";
 import styled from "styled-components";
 import LakeImage from "../Images/Lake.jpg";
 
@@ -6,7 +7,14 @@ const Main = styled.div`
   text-align: center;
   font-family: 'Oxygen', sans-serif;
   position: relative
-  `;
+`;
+
+const Title = styled.h1`
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%, -50%)
+`;
 
 const Image = styled.img`
   width: 100%;
@@ -26,6 +34,7 @@ const Para = styled.p`
 
 const App = () => (
   <Main>
+    <Title>Main Page</Title>
     <Image src={LakeImage} alt="Lake" />
     <Para>
       {`Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -46,4 +55,4 @@ const App = () => (
 );
 
 
-export default App;
+export default hot(App);
