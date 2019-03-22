@@ -20,6 +20,13 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "max-len": [
+            "error",
+            {
+                "code":
+                    80
+            }
+        ],
         "react/jsx-filename-extension": [
             1,
             {
