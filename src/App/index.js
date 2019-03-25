@@ -1,71 +1,14 @@
 import React from "react";
 import { hot } from "react-hot-loader/root";
-import styled from "styled-components";
-// import MainDiv from "Theme";
-import Plx from 'react-plx';
-import Forest from "Images/Forest.jpg";
-
-const Title = styled.h1`
-  color: white;
-  position: absolute;
-  text-shadow: 2px 2px 2px black;
-  font-size: 45px
-`;
-
-const Para = styled.p`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: grey;
-  padding: 50px;
-  background: whitesmoke;
-  margin: 0;
-  font-size: 20px;
-  opacity: 0.7;
-`;
-
-const style = {
-  textAlign: 'center',
-  fontFamily: 'Oxygen, sans-serif',
-  position: 'relative',
-  backgroundImage: `url(${Forest})`,
-  backgroundPosition: 'center',
-  width: '100%',
-  height: '100vh',
-  paddingTop: '20px',
-
-
-  display: 'flex',
-  justifyContent: 'center'
-}
-
-const parallaxData = [
-  {
-    start: '60px',
-    end: '500px',
-    properties: [
-      {
-        startValue: 100,
-        endValue: 0,
-        property: 'height',
-        unit: 'vh'
-      },
-    ],
-  },
-];
+import { MainDiv, Title, Para } from "Theme";
+import { parallaxData1, parallaxData2, parallaxData3 } from 'Parallax';
 
 const App = () => (
   <div style={{ height: '3000px' }}>
-
-    <Plx
-      style={style}
-      parallaxData={parallaxData}
-    >
-      {/* <MainDiv> */}
-      <Title>Parallax</Title>
-      {/* </MainDiv> */}
-    </Plx>
-    <Para>
+    <MainDiv parallaxData={parallaxData1}>
+      <Title parallaxData={parallaxData3}>Rotating</Title>
+    </MainDiv>
+    <Para parallaxData={parallaxData2}>
       {`Contrary to popular belief, Lorem Ipsum is not simply random text.
         It has roots in a piece of classical Latin literature from 45 BC, 
         making it over 2000 years old.
