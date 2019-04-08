@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Forest from "Images/Forest.jpg";
 import Plx from 'react-plx';
+import { Input, List } from 'antd'
 
 /* eslint-disable */
 
@@ -18,7 +19,9 @@ const MainDiv = styled(Plx)`
   font-family: 'Oxygen', sans-serif;
   position: relative;
   background-image: url(${Forest});
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   padding-top: 20px
@@ -34,15 +37,31 @@ const Title = styled.h1`
 `;
 
 const Para = styled(Plx)`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: grey;
-  padding: 50px;
-  background: whitesmoke;
+  color: whitesmoke;
+  padding: 30px;
+  background: black;
   margin: 0;
   font-size: 20px;
   opacity: 0.7;
 `;
 
-export { MainDiv, Title, Para }
+const TextInput = styled(Input)`
+width: 80%;
+    height: 100px;
+    font-size: 40px;
+    padding-left: 20px;
+`
+
+const ListItems = styled(List)`
+    list-style: none;
+    font-size: 40px;
+    color: wheat
+`
+
+const SingleItem = styled(List.Item)`
+    list-style: none;
+    font-size: 40px;
+    color: wheat
+`
+
+export { MainDiv, Title, Para, TextInput, ListItems, SingleItem }
